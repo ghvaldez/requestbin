@@ -28,7 +28,7 @@ BUGSNAG_KEY = ""
 if REALM == 'prod':
     DEBUG = False
     ROOT_URL = "http://requestb.in"
-    BIN_TTL = os.environ.get("BIN_TTL")
+    BIN_TTL = int(os.environ.get("BIN_TTL"))
 
     FLASK_SESSION_SECRET_KEY = os.environ.get("SESSION_SECRET_KEY", FLASK_SESSION_SECRET_KEY)
 
